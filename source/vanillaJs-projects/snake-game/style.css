@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.snake-board-ctn {
+    background-color: white;
+    height: 100vh;
+    display: block;
+}
+.snake-board {
+    background-color: gainsboro;
+    width: 90%;
+    height: 90%;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+}
+.snake {
+    background-color: orange;
+    height: 10px;
+    width: 1%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.operation-ctn {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    right: 30px;
+    bottom: 10px;
+    width: 500px;
+}
+.operation {
+    display: inline-block;
+    margin: 0 10px 0 0;
+    padding: 10px;
+    background-color: blueviolet;
+    cursor: pointer;
+}
+.operation:hover {
+    background-color: rgb(82, 53, 109);
+}
+.startBtn {
+    background-color: cyan;
+    padding: 10px;
+    cursor: pointer;
+}
+.food {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 10px;
+    width: 20px;
+    background-color: green;
+}
