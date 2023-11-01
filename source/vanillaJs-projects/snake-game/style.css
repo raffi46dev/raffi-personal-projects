@@ -17,12 +17,14 @@
     overflow: hidden;
 }
 .snake {
-    background-color: orange;
-    height: 10px;
-    width: 1%;
+    background-color: #11d921;
+    height: 2%;
+    width: 2%;
     position: absolute;
     top: 0;
     left: 0;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
 }
 .operation-ctn {
     display: flex;
@@ -53,6 +55,6 @@
     top: 0;
     left: 0;
     height: 10px;
-    width: 20px;
+    width: 10px;
     background-color: green;
 }
