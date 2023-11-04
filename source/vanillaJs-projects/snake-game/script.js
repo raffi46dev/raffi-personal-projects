@@ -2,14 +2,19 @@ const snake = document.getElementById('snake');
 const food = document.getElementById('food');
 const movementDelay = 500;
 const boardTimes = 100;
-let snake_Dimension = 1;
+let snake_Dimension = 2;
 let direction = {top:0, left:0};
 let foodArea = {};
 let intervalId;
+let score = 0;
 
 function startGame() {
     moveSnake();
     displayfood();
+}
+function updateScore() {
+    score += 1;
+    document.getElementById('score-panel').innerHTML = `Score - <b>${score}</b>`;    
 }
 
 function isSnakeFed(){
@@ -30,9 +35,7 @@ function growSnake(direction){
 
 function moveSnake(dir, negDir) {
     clearInterval(intervalId);
-    
     intervalId = setInterval(() => move(dir,negDir), movementDelay);
-   
 }
 
 function move(dir = 'left', negDir = false) {
@@ -53,8 +56,10 @@ function move(dir = 'left', negDir = false) {
         // snake.style.backgroundColor = "red"
 
     }
+    // snake.style.borderLeft += `border-${dir}:1px solid black`;
 
     if(isSnakeFed() == true) {
+        updateScore()
         growSnake(dir, negDir);
     }
 }
